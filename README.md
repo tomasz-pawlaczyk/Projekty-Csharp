@@ -9,8 +9,6 @@ Program monitoruje wszystkie pliki (`*.*`) w folderze **C:\nauka\testowanie** or
 
 
 
-
-
 ### Zad2.cs
 
 Program pilnuje folderu **testowanie** i wszystkiego, co jest w jego podfolderach. Obserwuje każdy dodany, usunięty albo przemianowany plik i informuje o tym w konsoli.  
