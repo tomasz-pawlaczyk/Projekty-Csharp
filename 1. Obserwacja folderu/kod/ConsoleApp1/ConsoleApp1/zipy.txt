@@ -1,0 +1,14 @@
+﻿using System.IO;
+using System.IO.Compression;
+
+string zipPath = @"C:\Users\tomas\Studia\III semestr\Csharp\warsztaty\zipy_do_testu\zdjeciaProjekt.zip";
+string output  = @"C:\Users\tomas\Studia\III semestr\Csharp\warsztaty\zipy_do_testu\rozpakowane";
+
+if (Directory.Exists(output))
+    Directory.Delete(output, true);
+
+Directory.CreateDirectory(output);
+
+ZipFile.ExtractToDirectory(zipPath, output);
+
+    
