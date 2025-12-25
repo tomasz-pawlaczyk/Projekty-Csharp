@@ -12,40 +12,14 @@ The analysis processes **nearly 10 million trips** and combines trip data with *
 ## 📂 Data Sources
 
 - **Citi Bike trip data (2015)**  
-  Each trip contains:
-  
-  - start/end time
-  - start/end station
-  - trip duration (seconds)
-  - user type (Subscriber / Customer)
-  - gender
-  - bike ID
-  - station coordinates
+  CSV fields:  
+  `tripduration, starttime, stoptime, start station id, start station name, start station latitude, start station longitude, end station id, end station name, end station latitude, end station longitude, bikeid, usertype, birth year, gender`
 
-- **NYC Weather data (2015)**
-  
-  - temperature
-  - weather events (rain, snow, fog)
+- **NYC Weather data (2015)**  
+  CSV fields:  
+    `date, temperature, weather_event`
 
 > CSV files are intentionally **not included in the repository** due to their large size.
-
----
-
-## ⚙️ Application Structure
-
-The program consists of multiple independent analytical modules, each executed with a timing wrapper:
-
-```csharp
-RunWithTimer("Compare gender usage", () => CompareGenderUsers.Run(tripsPath));
-RunWithTimer("Compare by time", () => CompareTripsByMonthAndHour.Run(tripsPath));
-RunWithTimer("Trips vs weather", () => CompareWeatherAndTrips.Run(tripsPath, weatherPath));
-RunWithTimer("Station rebalancing", () => CompareStationBalance.Run(tripsPath));
-RunWithTimer("Compare popular routes", () => ComparePopularRoutes.Run(tripsPath));
-RunWithTimer("Compare Customer vs Subscriber", () => CompareUserTypes.Run(tripsPath));
-RunWithTimer("Detect anomalies", () => DetectAnomalies.Run(tripsPath));
-```
-
-Each module focuses on a different analytical perspective and can be run independently.
 
 ---
 
