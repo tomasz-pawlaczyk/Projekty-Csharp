@@ -1,4 +1,4 @@
-# 📚 C# Mini Projects — University Coursework Repository
+# C# Mini Projects
 
 ## 📌 Overview
 
@@ -107,6 +107,6 @@ This project demonstrates:
 
 ## 📌 Notes
 
-- All projects in this repository were created as part of **academic coursework
+- All projects in this repository were created as part of academic coursework
 - Each project contains its own README with detailed explanation
 - Projects are independent and can be reviewed separately
