@@ -1,4 +1,4 @@
-# C# Mini Projects
+# Csharp Mini Projects
 
 ## 📌 Overview
 
